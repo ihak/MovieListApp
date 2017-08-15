@@ -15,6 +15,24 @@
 		E4C74F481F42D01D00D4F301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C74F471F42D01D00D4F301 /* Assets.xcassets */; };
 		E4C74F4B1F42D01D00D4F301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C74F491F42D01D00D4F301 /* LaunchScreen.storyboard */; };
 		E4C74F561F42D01D00D4F301 /* MovieListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F551F42D01D00D4F301 /* MovieListAppTests.swift */; };
+		E4C74F671F42D68F00D4F301 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F661F42D68F00D4F301 /* Movie.swift */; };
+		E4C74F681F42D68F00D4F301 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F661F42D68F00D4F301 /* Movie.swift */; };
+		E4C74F6A1F42D6D200D4F301 /* MovieSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F691F42D6D200D4F301 /* MovieSearchResponse.swift */; };
+		E4C74F6B1F42D6D200D4F301 /* MovieSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F691F42D6D200D4F301 /* MovieSearchResponse.swift */; };
+		E4C74F6E1F42DC7500D4F301 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F6D1F42DC7500D4F301 /* APIClient.swift */; };
+		E4C74F6F1F42DC7500D4F301 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F6D1F42DC7500D4F301 /* APIClient.swift */; };
+		E4C74F711F42DDB700D4F301 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F701F42DDB700D4F301 /* Environment.swift */; };
+		E4C74F721F42DDB700D4F301 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F701F42DDB700D4F301 /* Environment.swift */; };
+		E4C74F741F42E2CB00D4F301 /* ErrorDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F731F42E2CB00D4F301 /* ErrorDomain.swift */; };
+		E4C74F751F42E2CB00D4F301 /* ErrorDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F731F42E2CB00D4F301 /* ErrorDomain.swift */; };
+		E4C74F771F42FD4B00D4F301 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F761F42FD4B00D4F301 /* SearchQuery.swift */; };
+		E4C74F781F42FD4B00D4F301 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F761F42FD4B00D4F301 /* SearchQuery.swift */; };
+		E4C74F7A1F42FDBA00D4F301 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F791F42FDBA00D4F301 /* DBManager.swift */; };
+		E4C74F7B1F42FDBA00D4F301 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F791F42FDBA00D4F301 /* DBManager.swift */; };
+		E4C74F7D1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */; };
+		E4C74F7E1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */; };
+		E4C74F811F43092F00D4F301 /* iHAKTableRefresh in Resources */ = {isa = PBXBuildFile; fileRef = E4C74F801F43092F00D4F301 /* iHAKTableRefresh */; };
+		E4C74F821F43092F00D4F301 /* iHAKTableRefresh in Resources */ = {isa = PBXBuildFile; fileRef = E4C74F801F43092F00D4F301 /* iHAKTableRefresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +61,15 @@
 		E4C74F511F42D01D00D4F301 /* MovieListAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieListAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C74F551F42D01D00D4F301 /* MovieListAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListAppTests.swift; sourceTree = "<group>"; };
 		E4C74F571F42D01D00D4F301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C74F661F42D68F00D4F301 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E4C74F691F42D6D200D4F301 /* MovieSearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchResponse.swift; sourceTree = "<group>"; };
+		E4C74F6D1F42DC7500D4F301 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E4C74F701F42DDB700D4F301 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		E4C74F731F42E2CB00D4F301 /* ErrorDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDomain.swift; sourceTree = "<group>"; };
+		E4C74F761F42FD4B00D4F301 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
+		E4C74F791F42FDBA00D4F301 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQueryRepository.swift; sourceTree = "<group>"; };
+		E4C74F801F43092F00D4F301 /* iHAKTableRefresh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iHAKTableRefresh; sourceTree = "<group>"; };
 		F1AA4341D99F0EACDBE58F03 /* Pods_MovieListAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,12 +136,18 @@
 		E4C74F3F1F42D01C00D4F301 /* MovieListApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4C74F7F1F43088300D4F301 /* Frameworks */,
+				E4C74F6C1F42DC5200D4F301 /* Network */,
+				E4C74F641F42D57800D4F301 /* DB */,
+				E4C74F631F42D55A00D4F301 /* Views */,
+				E4C74F621F42D54200D4F301 /* Storyboards */,
+				E4C74F611F42D53A00D4F301 /* ViewControllers */,
+				E4C74F601F42D52D00D4F301 /* Models */,
 				E4C74F401F42D01D00D4F301 /* AppDelegate.swift */,
-				E4C74F421F42D01D00D4F301 /* ViewController.swift */,
-				E4C74F441F42D01D00D4F301 /* Main.storyboard */,
 				E4C74F471F42D01D00D4F301 /* Assets.xcassets */,
 				E4C74F491F42D01D00D4F301 /* LaunchScreen.storyboard */,
 				E4C74F4C1F42D01D00D4F301 /* Info.plist */,
+				E4C74F701F42DDB700D4F301 /* Environment.swift */,
 			);
 			path = MovieListApp;
 			sourceTree = "<group>";
@@ -126,6 +159,65 @@
 				E4C74F571F42D01D00D4F301 /* Info.plist */,
 			);
 			path = MovieListAppTests;
+			sourceTree = "<group>";
+		};
+		E4C74F601F42D52D00D4F301 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F661F42D68F00D4F301 /* Movie.swift */,
+				E4C74F691F42D6D200D4F301 /* MovieSearchResponse.swift */,
+				E4C74F761F42FD4B00D4F301 /* SearchQuery.swift */,
+				E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E4C74F611F42D53A00D4F301 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F421F42D01D00D4F301 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E4C74F621F42D54200D4F301 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F441F42D01D00D4F301 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E4C74F631F42D55A00D4F301 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E4C74F641F42D57800D4F301 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F791F42FDBA00D4F301 /* DBManager.swift */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		E4C74F6C1F42DC5200D4F301 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F6D1F42DC7500D4F301 /* APIClient.swift */,
+				E4C74F731F42E2CB00D4F301 /* ErrorDomain.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		E4C74F7F1F43088300D4F301 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F801F43092F00D4F301 /* iHAKTableRefresh */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C74F811F43092F00D4F301 /* iHAKTableRefresh in Resources */,
 				E4C74F4B1F42D01D00D4F301 /* LaunchScreen.storyboard in Resources */,
 				E4C74F481F42D01D00D4F301 /* Assets.xcassets in Resources */,
 				E4C74F461F42D01D00D4F301 /* Main.storyboard in Resources */,
@@ -227,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C74F821F43092F00D4F301 /* iHAKTableRefresh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +424,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C74F771F42FD4B00D4F301 /* SearchQuery.swift in Sources */,
 				E4C74F431F42D01D00D4F301 /* ViewController.swift in Sources */,
+				E4C74F711F42DDB700D4F301 /* Environment.swift in Sources */,
+				E4C74F6A1F42D6D200D4F301 /* MovieSearchResponse.swift in Sources */,
+				E4C74F7D1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */,
+				E4C74F7A1F42FDBA00D4F301 /* DBManager.swift in Sources */,
+				E4C74F741F42E2CB00D4F301 /* ErrorDomain.swift in Sources */,
 				E4C74F411F42D01D00D4F301 /* AppDelegate.swift in Sources */,
+				E4C74F6E1F42DC7500D4F301 /* APIClient.swift in Sources */,
+				E4C74F671F42D68F00D4F301 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +441,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C74F6B1F42D6D200D4F301 /* MovieSearchResponse.swift in Sources */,
+				E4C74F681F42D68F00D4F301 /* Movie.swift in Sources */,
+				E4C74F751F42E2CB00D4F301 /* ErrorDomain.swift in Sources */,
+				E4C74F7B1F42FDBA00D4F301 /* DBManager.swift in Sources */,
 				E4C74F561F42D01D00D4F301 /* MovieListAppTests.swift in Sources */,
+				E4C74F6F1F42DC7500D4F301 /* APIClient.swift in Sources */,
+				E4C74F781F42FD4B00D4F301 /* SearchQuery.swift in Sources */,
+				E4C74F721F42DDB700D4F301 /* Environment.swift in Sources */,
+				E4C74F7E1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +651,7 @@
 				E4C74F5C1F42D01D00D4F301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C74F5D1F42D01D00D4F301 /* Build configuration list for PBXNativeTarget "MovieListAppTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +660,7 @@
 				E4C74F5F1F42D01D00D4F301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
