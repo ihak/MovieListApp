@@ -31,10 +31,10 @@
 		E4C74F7B1F42FDBA00D4F301 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F791F42FDBA00D4F301 /* DBManager.swift */; };
 		E4C74F7D1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */; };
 		E4C74F7E1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */; };
-		E4C74F811F43092F00D4F301 /* iHAKTableRefresh in Resources */ = {isa = PBXBuildFile; fileRef = E4C74F801F43092F00D4F301 /* iHAKTableRefresh */; };
-		E4C74F821F43092F00D4F301 /* iHAKTableRefresh in Resources */ = {isa = PBXBuildFile; fileRef = E4C74F801F43092F00D4F301 /* iHAKTableRefresh */; };
 		E4C74F841F430C3900D4F301 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F831F430C3900D4F301 /* MovieListCell.swift */; };
 		E4C74F851F430C3900D4F301 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F831F430C3900D4F301 /* MovieListCell.swift */; };
+		E4C74F941F430FD000D4F301 /* iHAKTableRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */; };
+		E4C74F951F430FD000D4F301 /* iHAKTableRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +71,8 @@
 		E4C74F761F42FD4B00D4F301 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
 		E4C74F791F42FDBA00D4F301 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQueryRepository.swift; sourceTree = "<group>"; };
-		E4C74F801F43092F00D4F301 /* iHAKTableRefresh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iHAKTableRefresh; sourceTree = "<group>"; };
 		E4C74F831F430C3900D4F301 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
+		E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHAKTableRefresh.swift; sourceTree = "<group>"; };
 		F1AA4341D99F0EACDBE58F03 /* Pods_MovieListAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -219,9 +219,17 @@
 		E4C74F7F1F43088300D4F301 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E4C74F801F43092F00D4F301 /* iHAKTableRefresh */,
+				E4C74F8F1F430FAA00D4F301 /* iHAKTableRefresh */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4C74F8F1F430FAA00D4F301 /* iHAKTableRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */,
+			);
+			path = iHAKTableRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +321,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C74F811F43092F00D4F301 /* iHAKTableRefresh in Resources */,
 				E4C74F4B1F42D01D00D4F301 /* LaunchScreen.storyboard in Resources */,
 				E4C74F481F42D01D00D4F301 /* Assets.xcassets in Resources */,
 				E4C74F461F42D01D00D4F301 /* Main.storyboard in Resources */,
@@ -324,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C74F821F43092F00D4F301 /* iHAKTableRefresh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C74F841F430C3900D4F301 /* MovieListCell.swift in Sources */,
+				E4C74F941F430FD000D4F301 /* iHAKTableRefresh.swift in Sources */,
 				E4C74F771F42FD4B00D4F301 /* SearchQuery.swift in Sources */,
 				E4C74F431F42D01D00D4F301 /* ViewController.swift in Sources */,
 				E4C74F711F42DDB700D4F301 /* Environment.swift in Sources */,
@@ -450,6 +457,7 @@
 				E4C74F6B1F42D6D200D4F301 /* MovieSearchResponse.swift in Sources */,
 				E4C74F681F42D68F00D4F301 /* Movie.swift in Sources */,
 				E4C74F751F42E2CB00D4F301 /* ErrorDomain.swift in Sources */,
+				E4C74F951F430FD000D4F301 /* iHAKTableRefresh.swift in Sources */,
 				E4C74F7B1F42FDBA00D4F301 /* DBManager.swift in Sources */,
 				E4C74F561F42D01D00D4F301 /* MovieListAppTests.swift in Sources */,
 				E4C74F6F1F42DC7500D4F301 /* APIClient.swift in Sources */,

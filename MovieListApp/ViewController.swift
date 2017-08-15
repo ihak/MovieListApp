@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let CellIdentifier = "MovieListCell"
-    
+    var ihakTableRefresh: iHAKTableRefresh!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         
         // Set estimated row height allow tableview to approximate scroll indicator
         self.tableView.estimatedRowHeight = 66
+        
+        ihakTableRefresh = iHAKTableRefresh(tableView: tableView, refreshType: .TopAndBottom, delegate: self, dataSource: nil)
+        ihakTableRefresh.defaultContentOffset = -64.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,3 +56,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+//MARK - Extension - Implements iHAKTableRefreshDataSource 
+
+extension ViewController: iHAKTableRefreshDataSource, iHAKTableRefreshDelegate {
+    /**
+     Implement this method to perform any data refresh on the tableview in case of top refresh.
+     */
+    func iHAKTableRefreshWillPerformTopRefresh(refreshView: iHAKTableRefresh) {
+    }
+    
+    func iHAKTableRefreshWillPerformBottomRefresh(refreshView: iHAKTableRefresh) {
+    }
+    
+    func iHAKTableRefreshShouldPerformTopRefresh(refreshView: iHAKTableRefresh) -> Bool {
+        return true
+    }
+    
+    func iHAKTableRefreshShouldPerformBottomRefresh(refreshView: iHAKTableRefresh) -> Bool {
+        return true
+    }
+}
