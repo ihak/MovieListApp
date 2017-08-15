@@ -35,6 +35,8 @@
 		E4C74F851F430C3900D4F301 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F831F430C3900D4F301 /* MovieListCell.swift */; };
 		E4C74F941F430FD000D4F301 /* iHAKTableRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */; };
 		E4C74F951F430FD000D4F301 /* iHAKTableRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */; };
+		E4C74F971F43210000D4F301 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F961F43210000D4F301 /* Constants.swift */; };
+		E4C74F981F43210000D4F301 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C74F961F43210000D4F301 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		E4C74F7C1F42FED500D4F301 /* SearchQueryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQueryRepository.swift; sourceTree = "<group>"; };
 		E4C74F831F430C3900D4F301 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		E4C74F931F430FD000D4F301 /* iHAKTableRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHAKTableRefresh.swift; sourceTree = "<group>"; };
+		E4C74F961F43210000D4F301 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F1AA4341D99F0EACDBE58F03 /* Pods_MovieListAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +154,7 @@
 				E4C74F491F42D01D00D4F301 /* LaunchScreen.storyboard */,
 				E4C74F4C1F42D01D00D4F301 /* Info.plist */,
 				E4C74F701F42DDB700D4F301 /* Environment.swift */,
+				E4C74F961F43210000D4F301 /* Constants.swift */,
 			);
 			path = MovieListApp;
 			sourceTree = "<group>";
@@ -441,6 +445,7 @@
 				E4C74F711F42DDB700D4F301 /* Environment.swift in Sources */,
 				E4C74F6A1F42D6D200D4F301 /* MovieSearchResponse.swift in Sources */,
 				E4C74F7D1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */,
+				E4C74F971F43210000D4F301 /* Constants.swift in Sources */,
 				E4C74F7A1F42FDBA00D4F301 /* DBManager.swift in Sources */,
 				E4C74F741F42E2CB00D4F301 /* ErrorDomain.swift in Sources */,
 				E4C74F411F42D01D00D4F301 /* AppDelegate.swift in Sources */,
@@ -464,6 +469,7 @@
 				E4C74F781F42FD4B00D4F301 /* SearchQuery.swift in Sources */,
 				E4C74F721F42DDB700D4F301 /* Environment.swift in Sources */,
 				E4C74F7E1F42FED500D4F301 /* SearchQueryRepository.swift in Sources */,
+				E4C74F981F43210000D4F301 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

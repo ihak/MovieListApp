@@ -35,4 +35,18 @@ class MovieSearchResponse {
             }
         }
     }
+    
+    func clearResponse() {
+        self.page = 0
+        self.totalPages = 0
+        self.totalResults = 0
+        self.results = [Movie]()
+    }
+    
+    func updateResponse(newResponse: MovieSearchResponse) {
+        self.page = newResponse.page
+        self.totalPages = newResponse.totalPages
+        self.totalResults = newResponse.totalResults
+        self.results.append(contentsOf: newResponse.results)
+    }
 }

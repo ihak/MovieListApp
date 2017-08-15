@@ -26,6 +26,14 @@ class Movie {
     var overview = ""
     var releaseDate = Date.init(timeIntervalSince1970: 0.0)
     
+    var formatedReleaseDate: String {
+        get {
+            let df = DateFormatter()
+            df.dateFormat = "MMM d, yyyy"
+            return df.string(from: releaseDate)
+        }
+    }
+    
     convenience init(dictionary: [String : Any]) {
         self.init()
         
