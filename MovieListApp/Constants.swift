@@ -12,6 +12,7 @@ import UIKit
 // MARK: - Segues
 
 // MARK: - Storyboard IDs
+let kSearchSuggestionVC = "SearchSuggestionVC"
 
 //MARK: - Others
 func showAlert(title: String, message: String, viewController: UIViewController) {

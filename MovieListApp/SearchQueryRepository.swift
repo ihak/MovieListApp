@@ -56,4 +56,15 @@ class SearchQueryRepository {
         }
         return list
     }
+    
+    static func getList(matching: String) -> [SearchQuery] {
+        var list = [SearchQuery]()
+        let filter = SearchQueryTable.table.filter(SearchQueryTable.searchText.like("\(matching)%"))
+        if let rows = DBManager.sharedInstance.prepare(query: filter) {
+            for row in rows {
+                list.append(SearchQuery(row: row))
+            }
+        }
+        return list
+    }
 }

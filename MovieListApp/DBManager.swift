@@ -35,7 +35,7 @@ class DBManager {
         do {
             try db.run(SearchQueryTable.table.create(ifNotExists: true) { t in
                 t.column(SearchQueryTable.dbId, primaryKey: true)
-                t.column(SearchQueryTable.searchText)
+                t.column(SearchQueryTable.searchText, unique: true)
                 t.column(SearchQueryTable.totalResults)
                 t.column(SearchQueryTable.searchCount)
                 t.column(SearchQueryTable.lastSearchedOn)

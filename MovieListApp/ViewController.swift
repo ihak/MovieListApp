@@ -16,6 +16,20 @@ class ViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
 
     var searchResponse = MovieSearchResponse()
+    var searchQueries = [SearchQuery]()
+    
+    var searchSuggestionVC: SearchSuggestionVC!
+    
+    var isSearching = false {
+        willSet {
+            if newValue == true {
+                addSearchSuggestionVC()
+            }
+            else {
+                removeSearchSuggestionVC()
+            }
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,7 +45,6 @@ class ViewController: UIViewController {
         
         // Initialize table refresh control
         ihakTableRefresh = iHAKTableRefresh(tableView: tableView, refreshType: .TopAndBottom, delegate: self, dataSource: nil)
-//        ihakTableRefresh.defaultContentOffset = -64.0
         
         // Set search controller
         searchController.searchResultsUpdater = self
@@ -64,11 +77,45 @@ class ViewController: UIViewController {
                     self.ihakTableRefresh.finishRefresh(success: true)
                     self.searchResponse.updateResponse(newResponse:response)
                     self.tableView.reloadData()
+                    
+                    let sq = SearchQuery()
+                    sq.searchText = text
+                    
+                    let _ = SearchQueryRepository.add(query: sq)
                 }
             }
         }
     }
-
+    
+    func suggestSearch() {
+        if let text = self.searchController.searchBar.text {
+            if let _ = self.searchSuggestionVC {
+                self.searchSuggestionVC.search(text: text)
+            }
+        }
+    }
+    
+    func addSearchSuggestionVC() {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: kSearchSuggestionVC) as? SearchSuggestionVC {
+            self.searchSuggestionVC = vc
+            
+            self.addChildViewController(self.searchSuggestionVC)
+            
+            let topLayoutGuide = self.topLayoutGuide
+            let view = self.searchSuggestionVC.view!
+            self.view.addSubview(view)
+            self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:"H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view]))
+            self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:"V:[topLayoutGuide][view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view, "topLayoutGuide": topLayoutGuide]))
+        }
+    }
+    
+    func removeSearchSuggestionVC() {
+        if let _ = self.searchSuggestionVC {
+            self.searchSuggestionVC.view.removeFromSuperview()
+            self.searchSuggestionVC.removeFromParentViewController()
+            self.searchSuggestionVC = nil
+        }
+    }
 }
 
 //MARK: - Extension - Implements UITableViewDataSource and UITableViewDelegate methods
@@ -79,7 +126,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searchResponse.results.count
+        return searchResponse.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -139,16 +186,34 @@ extension ViewController: iHAKTableRefreshDataSource, iHAKTableRefreshDelegate {
 
 extension ViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Search interaction has ended and new result is being fetched
+        self.isSearching = false
+
+        // clear the previous results and perform new search
+        self.searchResponse.clearResponse()
+        self.tableView.reloadData()
         performSearch()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        // Clear the previous results
         self.searchResponse = MovieSearchResponse()
         self.tableView.reloadData()
+        
+        self.isSearching = false
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        // Search interaction has started
+        self.isSearching = true
+        
+        // Suggest search quries from local db
+        suggestSearch()
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        //TODO: implement search here
-        print("\(searchController.searchBar.text)")
+        // update the search quries filtered by search text
+        suggestSearch()
+        print("\(String(describing: searchController.searchBar.text))")
     }
 }

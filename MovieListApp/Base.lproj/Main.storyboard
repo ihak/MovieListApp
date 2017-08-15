@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sDc-at-cw7" id="bQZ-nq-NPS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-xE-mOe">
@@ -114,6 +114,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Search SuggestionVC-->
+        <scene sceneID="HiJ-MQ-6Ha">
+            <objects>
+                <viewController storyboardIdentifier="SearchSuggestionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Abo-nN-UE5" customClass="SearchSuggestionVC" customModule="MovieListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DIl-ug-w5b"/>
+                        <viewControllerLayoutGuide type="bottom" id="lCx-Cz-Yzt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XSn-Cq-ZeF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-zH-9lP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Abo-nN-UE5" id="PiZ-8P-F2s"/>
+                                    <outlet property="delegate" destination="Abo-nN-UE5" id="xzr-kv-EKc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eUy-zH-9lP" firstAttribute="top" secondItem="DIl-ug-w5b" secondAttribute="bottom" id="DC8-iG-l3n"/>
+                            <constraint firstAttribute="trailing" secondItem="eUy-zH-9lP" secondAttribute="trailing" id="WHO-yM-Mjk"/>
+                            <constraint firstItem="eUy-zH-9lP" firstAttribute="leading" secondItem="XSn-Cq-ZeF" secondAttribute="leading" id="efc-XA-rzk"/>
+                            <constraint firstItem="lCx-Cz-Yzt" firstAttribute="top" secondItem="eUy-zH-9lP" secondAttribute="bottom" id="jhL-Sd-4TN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="eUy-zH-9lP" id="KEG-8O-BS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUV-Bo-xaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pql-9x-nmr">

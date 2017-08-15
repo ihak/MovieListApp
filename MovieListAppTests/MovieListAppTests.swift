@@ -36,7 +36,7 @@ class MovieListAppTests: XCTestCase {
     func testSearchQueryDBAdd() {
         let query = SearchQuery()
         query.searchCount = 10
-        query.searchText = "inception"
+        query.searchText = "innovation"
         query.totalResults = 45
         
         XCTAssertNotNil(SearchQueryRepository.add(query: query))
@@ -72,6 +72,10 @@ class MovieListAppTests: XCTestCase {
     
     func testSearchQueryDBList() {
         XCTAssertGreaterThan(SearchQueryRepository.getList().count, 0)
+    }
+    
+    func testSearchQueryDBListMatching() {
+        XCTAssertGreaterThan(SearchQueryRepository.getList(matching: "in").count, 1)
     }
     
     func testPerformanceExample() {
