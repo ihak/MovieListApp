@@ -2,6 +2,8 @@
 //  Movie.swift
 //  MovieListApp
 //
+//  This class is used to parse and hold movie objects.
+//
 //  Created by Hassan Ahmed on 15/08/2017.
 //  Copyright © 2017 Hassan Ahmed. All rights reserved.
 //

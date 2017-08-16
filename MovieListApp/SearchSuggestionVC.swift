@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol SearchSuggestionDelegate {
+    func searchSuggestionVC(vc: SearchSuggestionVC, didSelectSearchQuery: SearchQuery);
+}
+
+
 class SearchSuggestionVC: UIViewController {
 
     let CellIdentifier = "CellIdentifier"
     
     var searchQueries = [SearchQuery]()
+    var delegate: SearchSuggestionDelegate?
     
     @IBOutlet var tableView: UITableView!
     
@@ -63,5 +69,12 @@ extension SearchSuggestionVC: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = query.searchText
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let query = searchQueries[indexPath.row]
+        
+        // Call delegate method upon selection
+        self.delegate?.searchSuggestionVC(vc: self, didSelectSearchQuery: query)
     }
 }

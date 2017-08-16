@@ -2,6 +2,9 @@
 //  SearchQuery.swift
 //  MovieListApp
 //
+//  This Class is used to hold search quries made by user.
+//  The queries are then saved in the db and later retrieved.
+//
 //  Created by Hassan Ahmed on 15/08/2017.
 //  Copyright © 2017 Hassan Ahmed. All rights reserved.
 //

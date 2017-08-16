@@ -2,6 +2,10 @@
 //  SearchQueryRepository.swift
 //  MovieListApp
 //
+//  This class is a repository interface for SearchQuery class.
+//  It provides the db functionalities for SearchQuery class
+//  including but not limited to basic CRUD operations.
+//
 //  Created by Hassan Ahmed on 15/08/2017.
 //  Copyright © 2017 Hassan Ahmed. All rights reserved.
 //
@@ -59,7 +63,11 @@ class SearchQueryRepository {
     
     static func getList(matching: String) -> [SearchQuery] {
         var list = [SearchQuery]()
-        let filter = SearchQueryTable.table.filter(SearchQueryTable.searchText.like("\(matching)%"))
+        let filter = SearchQueryTable.table
+        .filter(SearchQueryTable.searchText.like("\(matching)%") && SearchQueryTable.totalResults > 0)
+        .order(SearchQueryTable.dbId.desc)
+        .limit(10)
+        
         if let rows = DBManager.sharedInstance.prepare(query: filter) {
             for row in rows {
                 list.append(SearchQuery(row: row))

@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
 
     var searchResponse = MovieSearchResponse()
-    var searchQueries = [SearchQuery]()
     
     var searchSuggestionVC: SearchSuggestionVC!
     
@@ -59,6 +58,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /**
+     Fetch latest records
+    */
     func performSearch() {
         if let text = self.searchController.searchBar.text {
             guard text.isEmpty == false else {
@@ -78,15 +80,23 @@ class ViewController: UIViewController {
                     self.searchResponse.updateResponse(newResponse:response)
                     self.tableView.reloadData()
                     
+                    // Prepare the SearchQuery object to be saved in the db
                     let sq = SearchQuery()
                     sq.searchText = text
-                    
+                    sq.totalResults = self.searchResponse.totalResults
                     let _ = SearchQueryRepository.add(query: sq)
+                    
+                    if self.searchResponse.totalResults <= 0 {
+                        showAlert(title: "Error", message: "No results found.", viewController: self)
+                    }
                 }
             }
         }
     }
     
+    /**
+     Filter search results upon text change
+     */
     func suggestSearch() {
         if let text = self.searchController.searchBar.text {
             if let _ = self.searchSuggestionVC {
@@ -95,20 +105,28 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Add SearchSuggestionVC
+     */
     func addSearchSuggestionVC() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: kSearchSuggestionVC) as? SearchSuggestionVC {
             self.searchSuggestionVC = vc
+            self.searchSuggestionVC.delegate = self
             
             self.addChildViewController(self.searchSuggestionVC)
             
             let topLayoutGuide = self.topLayoutGuide
             let view = self.searchSuggestionVC.view!
+            view.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(view)
             self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:"H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view]))
-            self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:"V:[topLayoutGuide][view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view, "topLayoutGuide": topLayoutGuide]))
+            self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:"V:|-(64)-[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view, "topLayoutGuide": topLayoutGuide]))
         }
     }
-    
+
+    /**
+     Remove SearchSuggestionVC
+     */
     func removeSearchSuggestionVC() {
         if let _ = self.searchSuggestionVC {
             self.searchSuggestionVC.view.removeFromSuperview()
@@ -215,5 +233,21 @@ extension ViewController: UISearchResultsUpdating, UISearchBarDelegate {
         // update the search quries filtered by search text
         suggestSearch()
         print("\(String(describing: searchController.searchBar.text))")
+    }
+}
+
+//MARK: - Extension - Implements SearchSuggestionDelegate
+
+extension ViewController: SearchSuggestionDelegate {
+    func searchSuggestionVC(vc: SearchSuggestionVC, didSelectSearchQuery: SearchQuery) {
+        self.searchController.searchBar.text = didSelectSearchQuery.searchText
+        self.searchController.searchBar.resignFirstResponder()
+        
+        // Clear the previous results
+        self.searchResponse = MovieSearchResponse()
+        self.tableView.reloadData()
+
+        performSearch()
+        self.isSearching = false
     }
 }

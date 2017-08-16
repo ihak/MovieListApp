@@ -2,6 +2,9 @@
 //  MovieSearchResponse.swift
 //  MovieListApp
 //
+//  This class is used to parse and save the response of a search.
+//  It also maintains current and next page inforamtion for the result set.
+//
 //  Created by Hassan Ahmed on 15/08/2017.
 //  Copyright © 2017 Hassan Ahmed. All rights reserved.
 //

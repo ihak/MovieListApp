@@ -121,6 +121,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E416A1A91F441034007800DA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				E4C74F701F42DDB700D4F301 /* Environment.swift */,
+				E4C74F961F43210000D4F301 /* Constants.swift */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
 		E4C74F341F42D01C00D4F301 = {
 			isa = PBXGroup;
 			children = (
@@ -151,12 +160,11 @@
 				E4C74F621F42D54200D4F301 /* Storyboards */,
 				E4C74F611F42D53A00D4F301 /* ViewControllers */,
 				E4C74F601F42D52D00D4F301 /* Models */,
+				E416A1A91F441034007800DA /* Others */,
 				E4C74F401F42D01D00D4F301 /* AppDelegate.swift */,
 				E4C74F471F42D01D00D4F301 /* Assets.xcassets */,
 				E4C74F491F42D01D00D4F301 /* LaunchScreen.storyboard */,
 				E4C74F4C1F42D01D00D4F301 /* Info.plist */,
-				E4C74F701F42DDB700D4F301 /* Environment.swift */,
-				E4C74F961F43210000D4F301 /* Constants.swift */,
 			);
 			path = MovieListApp;
 			sourceTree = "<group>";
